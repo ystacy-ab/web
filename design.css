@@ -559,6 +559,10 @@ img, video {
     width: auto;
 }
 
+.decor-leaf-features {
+    display: none;
+}
+
 @media (max-width: 1024px) {
     .header, .first_page, .benefits, .how-it-works, .features, .app-section, .package, .reviews, .footer {
         padding: 40px 40px;
@@ -586,12 +590,121 @@ img, video {
     .benefits-grid, .features-grid, .reviews-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .nav-list {
         display: none;
     }
-    
+
     .first_page-title {
         font-size: 32px;
     }
+
+    .first_page {
+        flex-direction: column;
+        padding: 80px 20px 0 20px;
+        text-align: left;
+    }
+
+    .first_page-img {
+        width: 100%;
+        top: 0;
+        order: -1; 
+    }
+
+    .first_page-content {
+        max-width: 100%;
+        padding-top: 20px;
+    }
+
+    .cta-button {
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .decor-leaf-right {
+        /* width: 100px; */
+        right: -30px;
+        top: 720px;
+    }
+
+    .how-it-works-bottom {
+        flex-direction: column;
+    }
+
+    .process-video {
+        order: -1;
+        width: 100%;
+    }
+
+    .app-section {
+        flex-direction: column;
+        padding: 60px 20px;
+    }
+
+    .app-mockup-video {
+        /* order: -1; */
+        width: 100%;
+    }
+
+    .package-container {
+        flex-direction: column;
+    }
+
+    .package-main-item {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .package-accessories {
+        width: 100%;
+    }
+    .package .section-title {
+        text-align: center;
+    }
+
+    .benefits, .how-it-works, .features, .reviews, .footer, .package {
+        padding: 40px 20px;
+    }
+
+    .header {
+        padding: 20px;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .steps-list li {
+        max-width: 100%;
+    }
+
+    .app-features-list {
+        padding-left: 0;
+    }
+    .decor-leaf-bottom {
+        width: 60%;
+        height: 60%;
+        right: -80px;
+        top: -60px;
+    }
+    .decor-leaf-left {
+        display: none;
+    }
+
+    .decor-leaf-features {
+        display: block;
+        position: absolute;
+        left: -60px;
+        bottom: 160px;
+        width: 150px;
+        pointer-events: none;
+    }
+
+    .features {
+        position: relative;
+        overflow: hidden;
+    }
+
 }
