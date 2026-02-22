@@ -3,8 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'FixelAll';
-    ;
 }
+
 @font-face {
     font-family: 'FixelAll';
     src: url('./FixelAll/FixelDisplay/FixelDisplay-Medium.woff2') format('truetype');
@@ -20,7 +20,13 @@ img, video {
     max-width: 100%;
     display: block;
 }
+.burger-btn {
+    display: none;
+}
 
+.mobile-menu {
+    display: none;
+}
 .header {
     position: relative;
     top: 0;
@@ -586,7 +592,15 @@ img, video {
     }
 }
 
+.app-mockup-mobile {
+    display: none;
+}
+
 @media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
     .benefits-grid, .features-grid, .reviews-grid {
         grid-template-columns: 1fr;
     }
@@ -597,18 +611,97 @@ img, video {
 
     .first_page-title {
         font-size: 32px;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
     }
-
-    .first_page {
-        flex-direction: column;
-        padding: 80px 20px 0 20px;
+    .first_page-description {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
         text-align: left;
     }
 
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px 20px;
+        background: #f3f1ee;
+        z-index: 100;
+        justify-content: space-between;
+    }
+
+    .header-logo {
+        height: 28px;
+    }
+
+    .header-nav {
+        display: none; 
+    }
+
+    .burger-btn {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 30px;
+        color: #33321E80;
+        cursor: pointer;
+        z-index: 101;
+    }
+
+    .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 65%;
+        height: 300px;
+        background: #fff;
+        z-index: 200;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        box-shadow: -5px 0 20px rgba(0,0,0,0.15);
+        border-radius: 20px 0 0 20px;
+    }
+
+    .mobile-menu.open {
+        display: flex;
+    }
+
+    .mobile-menu a {
+        font-size: 20px;
+        color: #33321E80;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #33321E80;
+    }
+
+    .first_page {
+        padding-top: 58px; /* висота хедера */
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .first_page-img {
+        order: -1;
         width: 100%;
         top: 0;
-        order: -1; 
     }
 
     .first_page-content {
@@ -618,8 +711,9 @@ img, video {
 
     .cta-button {
         max-width: 100%;
-        width: 100%;
+        width: 90%;
         margin-bottom: 50px;
+        font-size: larger;
     }
 
     .decor-leaf-right {
@@ -639,12 +733,35 @@ img, video {
 
     .app-section {
         flex-direction: column;
-        padding: 60px 20px;
+        padding: 40px 20px;
+        text-align: left;
     }
 
-    .app-mockup-video {
-        /* order: -1; */
-        width: 100%;
+    .app-content .section-title {
+        text-align: center;
+        font-size: 23px;
+    }
+
+    .app-features-list {
+        padding-left: 0;
+        text-align: left;
+    }
+
+    .app-features-list strong,
+    .app-features-list p {
+        text-align: left;
+    }
+
+    .app-mockup-mobile {
+        display: block;
+        width: 110%;
+        margin-bottom: 20px;
+        margin-top: -15px;
+        border-radius: 12px;
+    }
+
+    .app-mockup-desktop {
+        display: none;
     }
 
     .package-container {
@@ -676,8 +793,25 @@ img, video {
         gap: 30px;
     }
 
+    .how-it-works .section-title {
+        font-size: 26px;
+        text-align: left;
+    }
+
+    .subsection-title {
+        margin-top: -30px;
+        font-size: 20px;
+        text-align: left;
+    }
+
     .steps-list li {
+        font-size: 14px;
         max-width: 100%;
+        text-align: left;
+    }
+
+    .how-it-works {
+        text-align: left;
     }
 
     .app-features-list {
@@ -696,8 +830,8 @@ img, video {
     .decor-leaf-features {
         display: block;
         position: absolute;
-        left: -60px;
-        bottom: 160px;
+        left: -35px;
+        bottom: 220px;
         width: 150px;
         pointer-events: none;
     }
@@ -706,5 +840,25 @@ img, video {
         position: relative;
         overflow: hidden;
     }
-
+    .features .section-title {
+        font-size: 26px;
+    }
+    .feature-item {
+        max-width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .section-title {
+        font-size: 24px;
+        margin-bottom: 25px;
+        text-align: left;
+        margin-left: auto;
+        width: 85%;
+        margin-right: auto;
+    }
+    .benefit-card {
+        max-width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

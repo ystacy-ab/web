@@ -10,12 +10,20 @@
 
     <header class="header">
         <img class="header-logo" src="./icons/logo.png">
+        <button class="burger-btn" onclick="toggleMenu()">☰</button>
+        <div class="mobile-menu" id="mobileMenu">
+            <button class="close-btn" onclick="toggleMenu()">✕</button>
+            <a href="#">Про товар</a>
+            <a href="#">Додаток</a>
+            <a href="#">Відгуки</a>
+            <a href="#">Замовити</a>
+        </div>
         <nav class="header-nav">
             <ul class="nav-list">
                 <li><a class="nav-link" href="#">Про товар</a></li>
                 <li><a class="nav-link" href="#">Додаток</a></li>
                 <li><a class="nav-link" href="#">Відгуки</a></li>
-                <li><a class="nav-link" href="#">Зв’язатися</a></li>
+                <li><a class="nav-link" href="#">Замовити</a></li>
             </ul>
         </nav>
     </header>
@@ -139,6 +147,9 @@
         <section class="app-section">
             <div class="app-content">
               <h2 class="section-title">Функції мобільного додатку</h2>
+              <video class="app-mockup-video app-mockup-mobile" autoplay muted loop playsinline>
+                <source src="./icons/screen_video.mp4" type="video/mp4">
+              </video>
               <ol class="app-features-list">
                 <li>
                     <div>
@@ -166,7 +177,7 @@
                 </li>
               </ol>
             </div>
-            <video class="app-mockup-video" autoplay muted loop playsinline>
+            <video class="app-mockup-video app-mockup-desktop" autoplay muted loop playsinline>
               <source src="./icons/screen_video.mp4" type="video/mp4">
             </video>
           </section>
@@ -240,6 +251,10 @@
         </div>
         <img class="decor-leaf-bottom" src="./icons/leaf_bottom.png">
     </footer>
-
+    <script>
+        function toggleMenu() {
+            document.getElementById('mobileMenu').classList.toggle('open');
+        }
+    </script>
 </body>
 </html>
